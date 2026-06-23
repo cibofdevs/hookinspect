@@ -1,0 +1,12 @@
+{
+  "name": "hookinspect",
+  "version": "1.0.0",
+  "description": "HookInspect - Free webhook testing and HTTP inspector - by Ahmad Wijaya @cibofdevs",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  }
+}

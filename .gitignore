@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Netlify local dev state
+.netlify/
+
+# Environment variables
+.env
+.env.local
+.env*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# macOS
+.DS_Store

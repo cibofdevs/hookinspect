@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /view/
+Disallow: /r/
+Disallow: /api/
+
+Sitemap: https://hookinspect.netlify.app/sitemap.xml

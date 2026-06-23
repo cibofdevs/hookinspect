@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>HookInspect – Free Webhook Tester &amp; HTTP Inspector</title>
+    <meta name="description" content="Generate a free webhook URL to capture and inspect HTTP requests in real-time. View headers, body, and query parameters instantly — no sign-up required." />
+    <meta name="keywords" content="webhook tester, webhook testing tool, test webhook online, webhook inspector, http request inspector, webhook debugger, free webhook url" />
+    <meta name="author" content="Ahmad Wijaya" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://hookinspect.netlify.app/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hookinspect.netlify.app/" />
+    <meta property="og:site_name" content="HookInspect" />
+    <meta property="og:title" content="HookInspect – Free Webhook Tester &amp; HTTP Inspector" />
+    <meta property="og:description" content="Generate a free webhook URL to capture and inspect HTTP requests in real-time. View headers, body, and query parameters instantly — no sign-up required." />
+    <meta property="og:image" content="https://hookinspect.netlify.app/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="HookInspect – Free Webhook Tester &amp; HTTP Inspector" />
+    <meta name="twitter:description" content="Generate a free webhook URL to capture and inspect HTTP requests in real-time. View headers, body, and query parameters instantly — no sign-up required." />
+    <meta name="twitter:image" content="https://hookinspect.netlify.app/og-image.png" />
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "HookInspect",
+      "url": "https://hookinspect.netlify.app",
+      "description": "Free webhook testing and HTTP request inspection tool.",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "author": { "@type": "Person", "name": "Ahmad Wijaya", "url": "https://github.com/cibofdevs" }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/style.css" />
+    <script>(function(){try{var t=localStorage.getItem('wh_theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+  </head>
+  <body class="index-page">
+
+    <nav>
+      <div class="nav-left">
+        <a href="/" class="logo">
+          <div class="logo-box">
+            <svg viewBox="0 0 24 24" fill="#04121A" width="17" height="17"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <span class="logo-word">HookInspect</span>
+        </a>
+      </div>
+
+      <div class="nav-links">
+        <a class="nav-link" href="#features">Features</a>
+        <a class="nav-link" href="https://github.com/cibofdevs" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.46-1.11-1.46-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10.02 10.02 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>
+        </a>
+      </div>
+
+      <div class="nav-right">
+        <div class="divider"></div>
+        <button id="theme-toggle" class="theme-toggle" title="Switch theme"></button>
+        <button class="btn-nav-cta" onclick="document.getElementById('create-btn').click()">Open App</button>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div class="hero-glow"></div>
+
+        <div class="hero-badge">
+          <span class="hero-dot"></span>
+          Live &middot; Free &middot; No sign-up
+        </div>
+
+        <h1>Catch &amp; inspect webhooks in <span class="grad-text">real time</span></h1>
+
+        <p>Generate a unique URL, point any service at it, and watch every HTTP request land instantly — headers, body, and query params, fully decoded.</p>
+
+        <div class="hero-actions">
+          <button class="cta-btn" id="create-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M12 5v14M5 12h14"/></svg>
+            Create webhook URL
+          </button>
+        </div>
+      </section>
+
+      <!-- DEMO STRIP -->
+      <section class="demo-strip" id="demo">
+        <div class="demo-terminal">
+          <div class="demo-terminal-bar">
+            <span class="demo-dot"></span>
+            <span class="demo-dot"></span>
+            <span class="demo-dot"></span>
+            <span class="demo-filename">send-request.sh</span>
+          </div>
+          <div class="demo-body">
+            <span class="t-dim">$ </span><span class="t-text">curl</span> -X <span class="t-method">POST</span> \
+            <span class="t-url">https://hookinspect.netlify.app/r/d5e1a79d</span>
+            <span class="t-flag">-H <span class="t-str">"Content-Type: application/json"</span> \</span>
+            <span class="t-flag">-d <span class="t-str">'{"event":"order.paid"}'</span></span>
+            <div class="t-sep">
+              <span class="t-ok">200 OK</span><span>&middot;</span><span>captured in 6 ms</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="demo-endpoint">
+          <div class="demo-ep-label">Your endpoint</div>
+          <div class="demo-ep-url-box">
+            <span class="demo-ep-slug">/r/d5e1a79d-6748</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--text-mute)" stroke-width="2" width="15" height="15"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+          </div>
+          <div class="demo-ep-stat">
+            <span style="color:var(--text-mute);font-family:var(--font-mono);font-size:12px">requests</span>
+            <span style="color:var(--text);font-family:var(--font-mono);font-size:12px;font-weight:600">3 / 100</span>
+          </div>
+          <div class="demo-ep-track">
+            <div class="demo-ep-fill" style="width:3%"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section class="features-section" id="features">
+        <div class="section-prefix">// why hookinspect</div>
+        <h2 class="section-title">Everything you need to debug a webhook</h2>
+        <div class="features">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <h3>Real-time capture</h3>
+            <p>Requests appear the instant they arrive — no refresh, no polling lag.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <h3>Every HTTP method</h3>
+            <p>GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS — all captured and tagged.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <h3>Decoded payloads</h3>
+            <p>Pretty-printed JSON, full headers, and query params, neatly separated.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>
+            </div>
+            <h3>Persistent storage</h3>
+            <p>Up to 100 requests kept per endpoint so you can replay and compare.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- RECENT WEBHOOKS -->
+      <div class="recent-section" id="recent-section" style="display:none">
+        <div class="recent-header">
+          <span class="recent-title">Recent endpoints</span>
+          <button class="btn-clear-history" id="clear-history-btn">clear history</button>
+        </div>
+        <div class="recent-list" id="recent-list"></div>
+        <div class="recent-pagination" id="recent-pagination" style="display:none">
+          <button class="btn-page" id="page-prev">&#8592; Prev</button>
+          <span class="page-info" id="page-info">1 / 1</span>
+          <button class="btn-page" id="page-next">Next &#8594;</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-credit">
+        Built by <span>Ahmad Wijaya</span> &middot;
+        <a href="https://github.com/cibofdevs" target="_blank" rel="noopener">@cibofdevs</a>
+        <br/>
+        <a href="https://ko-fi.com/cibofdevs" target="_blank" rel="noopener" class="kofi-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          Support on Ko-fi
+        </a>
+      </div>
+      <div class="footer-meta">v2 &middot; cyan/4D7CFF</div>
+    </footer>
+
+    <script src="/index.js"></script>
+    <script src="/theme.js"></script>
+  </body>
+</html>
